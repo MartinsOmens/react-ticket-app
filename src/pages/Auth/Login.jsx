@@ -2,61 +2,63 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-900/90">
+    <section className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-[1440px] flex flex-col items-center justify-center px-6 py-12 md:py-20">
-        {/* Right side - Login Form */}
-        <div className="md:w-1/2 max-w-md w-full bg-gray-800/80 backdrop-blur-md shadow-lg rounded-2xl border border-gray-700 p-8">
-          <h3 className="text-xl font-semibold text-white mb-6 text-center">
+        {/* Login Form */}
+        <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
+          <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
             Sign in to your account
           </h3>
 
           <form className="space-y-5">
+            {/* Email */}
             <div>
-              <label className="block text-sm font-medium text-white mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email address
               </label>
               <input
                 type="email"
                 placeholder="you@example.com"
-                className="w-full px-4 py-2 rounded-lg border border-gray-700 bg-gray-900/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition"
               />
             </div>
 
+            {/* Password */}
             <div>
-              <label className="block text-sm font-medium text-white mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
               </label>
               <input
                 type="password"
                 placeholder="••••••••"
-                className="w-full px-4 py-2 rounded-lg border border-gray-700 bg-gray-900/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition"
               />
             </div>
 
-            <div className="flex items-center justify-between text-sm text-gray-300">
+            {/* Remember & Forgot */}
+            <div className="flex items-center justify-between text-sm text-gray-600">
               <label className="flex items-center gap-2">
-                <input type="checkbox" className="rounded border-gray-600" />
+                <input type="checkbox" className="rounded border-gray-400" />
                 Remember me
               </label>
-              <a href="#" className="text-primary hover:underline">
+              <a href="#" className="text-blue-600 hover:underline">
                 Forgot password?
               </a>
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-2.5 rounded-lg bg-blue-600 text-white font-medium shadow-md hover:bg-blue-500 transition"
+              className="w-full py-3 rounded-lg bg-blue-600 text-white font-medium shadow-md hover:bg-blue-700 transition"
             >
               Log In
             </button>
           </form>
 
-          <p className="text-gray-300 mt-4 text-center">
-            Already have an account?{" "}
-            <Link
-              to="/signup"
-              className="text-primary hover:underline font-medium"
-            >
+          {/* Signup Link */}
+          <p className="text-gray-600 mt-4 text-center">
+            Don't have an account?{" "}
+            <Link to="/signup" className="text-blue-600 hover:underline font-medium">
               Sign Up
             </Link>
           </p>
