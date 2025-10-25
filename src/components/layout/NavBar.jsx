@@ -19,19 +19,6 @@ export default function NavBar() {
           </span>
         </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          {["Features", "Testimonials", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-lg font-medium text-gray-700 hover:text-gray-500 transition-colors px-2 py-1 rounded focus:outline-none"
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
           <Link
@@ -60,24 +47,12 @@ export default function NavBar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-all">
+        <div className="md:hidden bg-white transition-all">
           <div className="flex flex-col px-4 py-3 space-y-2">
-            {["Features", "Testimonials", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={() => setIsOpen(false)}
-                className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition px-2 py-1 rounded"
-              >
-                {item}
-              </a>
-            ))}
-            <hr className="border-gray-200 dark:border-gray-800 my-2" />
-
             {/* Mobile Login / Signup Links */}
             <Link
               to="/login"
-              className="block w-full px-4 py-2 text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              className="block w-full px-4 py-2 text-sm font-medium rounded-md text-black dark:text-gray-200 border border-gray-200 transition"
               onClick={() => setIsOpen(false)}
             >
               Login

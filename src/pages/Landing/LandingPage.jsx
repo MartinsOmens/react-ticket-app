@@ -138,6 +138,25 @@ export function LandingPage() {
         </div>
       </section>
 
+      {/* New CTA Section Under Features */}
+      <section className="py-20 md:py-32 bg-white">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Ready to get started?
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            Join thousands of teams already managing their support tickets more efficiently.
+          </p>
+          <Link
+            to="/signup"
+            className="w-[200px] px-5 py-4 rounded-full bg-blue-600 text-white text-lg font-medium flex items-center justify-center mx-auto hover:bg-blue-700 transition"
+          >
+            Get Started
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
