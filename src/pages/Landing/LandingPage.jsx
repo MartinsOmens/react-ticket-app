@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 export function LandingPage() {
   return (
-    <div className="w-full">
+    <div className="w-full bg-white text-gray-900">
       {/* Nav Section */}
       <NavBar />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gray-900/90 pt-20 pb-32 md:pt-32 md:pb-48">
-        {/* Background effects */}
+      <section className="relative overflow-hidden bg-white pt-20 pb-32 md:pt-32 md:pb-48">
+        {/* Circle Background */}
         <div className="absolute -top-24 -right-24 w-96 h-96 opacity-40 pointer-events-none">
           <svg
             viewBox="0 0 200 200"
@@ -21,11 +21,7 @@ export function LandingPage() {
             <defs>
               <radialGradient id="circleGradient" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stopColor="currentColor" stopOpacity="0.2" />
-                <stop
-                  offset="70%"
-                  stopColor="currentColor"
-                  stopOpacity="0.08"
-                />
+                <stop offset="70%" stopColor="currentColor" stopOpacity="0.08" />
                 <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
               </radialGradient>
             </defs>
@@ -43,16 +39,16 @@ export function LandingPage() {
         </div>
 
         {/* Hero Content */}
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-500 dark:text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
               Manage your tickets effortlessly.
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Ticketly helps you organize, track, and resolve issues faster.
-              Streamline your workflow with our intuitive ticket management
-              system.
+              Streamline your workflow with our intuitive ticket management system.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link
                 to="/signup"
@@ -64,7 +60,7 @@ export function LandingPage() {
 
               <Link
                 to="/login"
-                className="px-6 py-3 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 text-lg font-medium bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-lg font-medium bg-white hover:bg-gray-100 transition flex items-center justify-center"
               >
                 Login
               </Link>
@@ -74,7 +70,7 @@ export function LandingPage() {
 
         {/* Decorative bottom wave */}
         <svg
-          className="absolute bottom-0 left-0 right-0 w-full h-24 text-white dark:text-gray-900"
+          className="absolute bottom-0 left-0 right-0 w-full h-24 text-blue-100"
           viewBox="0 0 1440 120"
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -98,18 +94,14 @@ export function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section
-        id="features"
-        className="py-20 md:py-32 bg-white dark:bg-gray-900"
-      >
+      <section id="features" className="py-20 md:py-32 bg-gray-50">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Powerful features for modern teams
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Everything you need to manage tickets efficiently and keep your
-              team aligned.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Everything you need to manage tickets efficiently and keep your team aligned.
             </p>
           </div>
 
@@ -133,17 +125,13 @@ export function LandingPage() {
             ].map((feature, i) => (
               <div
                 key={i}
-                className="p-8 bg-gray-50 dark:bg-gray-800 rounded-2xl hover:shadow-lg transition-shadow"
+                className="p-8 bg-white rounded-2xl hover:shadow-lg transition-shadow"
               >
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  {feature.desc}
-                </p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
