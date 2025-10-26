@@ -1,7 +1,7 @@
 # 🚀 React + Vite Project
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-BADGE-ID/deploy-status)](https://hng-task-2-react-ticket-app.netlify.app/)
-[![Repository](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/MartinsOmens/react-ticket-app)
+[![Netlify Status](https://hng-task-2-react-ticket-app.netlify.app/)](https://hng-task-2-react-ticket-app.netlify.app/)
+[![Repository](https://github.com/MartinsOmens/react-ticket-app)](https://github.com/MartinsOmens/react-ticket-app)
 
 ---
 
